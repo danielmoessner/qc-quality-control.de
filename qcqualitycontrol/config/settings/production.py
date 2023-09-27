@@ -1,12 +1,8 @@
 from .base import *
 
-# Secret Settings
-
 DEBUG = False
 
 ALLOWED_HOSTS = get_secret("ALLOWED_HOSTS")
-
-# Logging
 
 LOGGING = {
     'version': 1,
