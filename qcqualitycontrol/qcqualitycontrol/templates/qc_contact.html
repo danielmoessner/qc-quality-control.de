@@ -1,0 +1,254 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  {% include 'partials/head.html' %}
+</head>
+<body class="bg-light">
+
+  <!-- NAVBAR
+  ================================================== -->
+  {% include 'partials/qc_navbar.html' with class='' %}
+
+  <!-- WELCOME
+  ================================================== -->
+  <section class="py-10 py-md-14 overlay overlay-black overlay-60 bg-cover" style="background-image: url({% static 'img/photos/contact_opt.jpg' %}); background-position: 50% 10%;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 text-center">
+
+          <!-- Heading -->
+          <h1 class="display-2 font-weight-bold text-white">
+            We’re Here to Help.
+          </h1>
+
+          <!-- Text -->
+          <p class="lead text-white-75 mb-0">
+            We always want to hear from you! Let us know how we can best help you and we'll do our very best.
+          </p>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- SHAPE
+  ================================================== -->
+  <div class="position-relative">
+    <div class="shape shape-bottom shape-fluid-x svg-shim text-light">
+      {% include 'shapes/curves/curve-1.svg' %}
+    </div>
+  </div>
+
+  <!-- INFO
+  ================================================== -->
+  <section class="py-7 py-md-9 border-bottom border-gray-300" id="info">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+
+          <!-- Button -->
+          <a href="#info" class="btn btn-white btn-rounded-circle shadow mt-n11 mt-md-n13" data-toggle="smooth-scroll">
+            <i class="fe fe-arrow-down"></i>
+          </a>
+
+        </div>
+      </div> <!-- / .row -->
+      <div class="row">
+        <div class="col-12 col-md-6 text-center border-right border-gray-300">
+
+          <!-- Heading -->
+          <h6 class="text-uppercase text-gray-700 mb-1">
+            Call anytime
+          </h6>
+
+          <!-- Link -->
+          <div class="mb-5 mb-md-0">
+            <a href="tel:+498131998099" class="h4">
+              +49 8131 998099
+            </a>
+          </div>
+
+        </div>
+        <div class="col-12 col-md-6 text-center">
+
+          <!-- Heading -->
+          <h6 class="text-uppercase text-gray-700 mb-1">
+            Email us
+          </h6>
+
+          <!-- Link -->
+          <a href="mailto:info@qc-quality-control.de?subject=Contact%20Inquiry" class="h4">
+            info@qc-quality-control.de
+          </a>
+
+        </div>
+      </div> <!-- / .row -->
+    </div>
+  </section>
+
+  <!-- FORM
+  ================================================== -->
+  <section class="pt-8 pt-md-11 pb-8 pb-md-14">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 text-center">
+
+          <!-- Heading -->
+          <h2 class="font-weight-bold">
+            Let us hear from you directly!
+          </h2>
+
+          <!-- Text -->
+          <p class="font-size-lg text-muted mb-7 mb-md-9">
+            We always want to hear from you! Let us know how we can best help you and we'll do our very best.
+          </p>
+
+        </div>
+      </div> <!-- / .row -->
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-12 col-lg-10">
+
+          <!-- success -->
+          <div class="alert alert-success" role="alert" id="inquiry-form-success" style="display: none;">
+            Your message was sent. Thank you. We will reach out as soon as possible.
+          </div>
+
+          <!-- failure -->
+          <div class="alert alert-danger" role="alert" id="inquiry-form-failure" style="display: none;">
+            Something went wrong. Please try again later or reach out via email. Info: We don't allow links in the message.
+          </div>
+
+          <!-- Form -->
+          <form id="inquiry-form">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="form-group mb-5">
+
+                  <!-- Label -->
+                  <label for="contactName">
+                    Full name
+                  </label>
+
+                  <!-- Input -->
+                  <input type="text" class="form-control" id="contactName" placeholder="Full name" name="name">
+
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group mb-5">
+
+                  <!-- Label -->
+                  <label for="contactEmail">
+                    Email
+                  </label>
+
+                  <!-- Input -->
+                  <input type="email" class="form-control" id="contactEmail" placeholder="hello@domain.com" name="email">
+
+                </div>
+              </div>
+            </div> <!-- / .row -->
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="form-group mb-5">
+
+                  <!-- Label -->
+                  <label for="contactName">
+                    Company
+                  </label>
+
+                  <!-- Input -->
+                  <input type="text" class="form-control" id="contactName" placeholder="Company name" name="company">
+
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group mb-5">
+
+                  <!-- Label -->
+                  <label for="contactEmail">
+                    Phone
+                  </label>
+
+                  <!-- Input -->
+                  <input type="phone" class="form-control" id="contactEmail" placeholder="Phone number" name="phone">
+
+                </div>
+              </div>
+            </div> <!-- / .row -->
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group mb-7 mb-md-9">
+
+                  <!-- Label -->
+                  <label for="contactMessage">
+                    What can we help you with?
+                  </label>
+
+                  <!-- Input -->
+                  <textarea class="form-control" id="contactMessage" rows="5" name="message" placeholder="Tell us what we can help you with!"></textarea>
+
+                </div>
+              </div>
+            </div> <!-- / .row -->
+            <div class="row justify-content-center">
+              <div class="col-auto">
+
+                <!-- Submit -->
+                <button type="submit" class="btn btn-primary lift" id="inquiry-submit-button">
+                  Send message
+                </button>
+
+              </div>
+            </div> <!-- / .row -->
+          </form>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+      
+
+  <!-- SHAPE
+  ================================================== -->
+  <div class="position-relative">
+    <div class="shape shape-bottom shape-fluid-x svg-shim text-dark">
+      {% include 'shapes/curves/curve-1.svg' %}
+    </div>
+  </div>
+
+  <!-- FOOTER
+  ================================================== -->
+  {% include 'partials/qc_footer.html' with class='bg-dark' %}
+
+    <!-- JAVASCRIPT
+  ================================================== -->
+  {% include 'partials/scripts.html' %}
+  <script type="text/javascript">
+    $(function () {
+      $("#inquiry-submit-button").click(function (e) {
+        $("#inquiry-form").hide()
+        e.preventDefault()
+        $.ajax({
+          type: 'POST',
+          url: '/contact',
+          data: $("#inquiry-form").serialize(),
+          cache: false,
+          success: function (data, status) {
+            if (data['status'] == "ok") {
+              $("#inquiry-form-success").fadeIn();
+             
+            } else {
+              $("#inquiry-form-failure").fadeIn()
+            }
+          }
+        });
+      }); 
+    });
+  </script>
+
+</body>
+</html>

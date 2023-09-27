@@ -1,0 +1,43 @@
+//
+// list.scss
+// Theme component
+//
+
+.list {
+  // margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+  // margin-top: 4px;
+  // margin-bottom: 4px;
+}
+.list .list {
+  padding-left: 10px;
+}
+
+.list-item {
+  line-height: 1;
+  margin-top: 8px;
+}
+
+.list-item + .list-item {
+  // margin-top: $list-item-spacing-y;
+  // margin-top: 3px;
+  // margin-bottom: 3px;
+}
+
+.list-link {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-size: $list-link-font-size;
+  color: $list-link-color;
+
+  @include hover-focus {
+    text-decoration: none;
+    color: $list-link-hover-color;
+  }
+}
+
+.list-item a[aria-expanded="true"] {
+  color: $gray-800;
+}

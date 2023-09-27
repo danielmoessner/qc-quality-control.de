@@ -1,0 +1,83 @@
+{% for category, items in category_items.items %}
+{% if children %}
+<div class="row align-items-center mb-5">
+    <div class="col">
+        <!-- Heading -->
+        <h4 class="font-weight-bold mb-1">
+            {{ category }}
+        </h4>
+    </div>
+</div> <!-- / .row -->
+{% endif %}
+<div class="row">
+    <div class="col-12">
+        <!-- Table -->
+        {% if items.products %}
+        <div class="table-responsive {% if not items.files %}mb-7 mb-md-10{% else %}mb-4 mb-md-5{% endif %}">
+            <table class="table table-dark bg-dark table-align-middle m-0">
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            <span class="h6 text-uppercase font-weight-bold">Image</span>
+                        </th>
+                        <th scope="col">
+                            <span class="h6 text-uppercase font-weight-bold">Product</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for product in items.products %}
+                    <tr>
+                        <td style="width: 15%;">
+                            <a href="{% url 'content:product' product.slug %}">
+                                <img src="{{ product.image.url }}" class="img-fluid">
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{% url 'content:product' product.slug %}" class="text-reset text-decoration-none">
+                                <p class="mb-1">{{ product.name }}</p>
+                                <p class="font-size-sm text-gray-500 mb-0">
+                                    {% if product.sub %}{{ product.sub }}{% endif %}
+                                </p>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+        <!-- Table -->
+        {% if items.files %}
+        <div class="table-responsive mb-7 mb-md-10">
+            <table class="table table-dark bg-dark table-align-middle m-0">
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            <span class="h6 text-uppercase font-weight-bold">File</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for file in items.files %}
+                    <tr>
+                        <td>
+                            <a href="{% url 'content:file' file.slug %}" class="text-reset text-decoration-none">
+                                <p class="mb-1">{{ file.name }}</p>
+                                <p class="font-size-sm text-gray-500 mb-0">
+                                    {% if file.sub %}{{ file.sub }}{% endif %}
+                                </p>
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+        {% if not items.products and not items.files %}
+            <p class="mb-7 mb-md-10">empty</p>
+        {% endif %}
+    </div>
+</div> <!-- / .row -->
+{% endfor %}

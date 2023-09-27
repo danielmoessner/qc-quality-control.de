@@ -1,0 +1,66 @@
+// 
+// user-variables.scss
+// Use this to overwrite Bootstrap and Landkit variables
+//
+
+// Example of a variable override to change Landkit's background color
+// Remove the "//" to comment it in and see it in action!
+// $font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+$primary: #433e8e;
+
+// todo
+// $gray-300: #ddd7ee !default;
+// $gray-400: #d0c6e6 !default;
+// $gray-500: #b5aad4 !default;
+// $gray-600: #9285b7 !default;
+// $gray-700: #615091 !default;
+// $gray-800: #493875 !default;
+// $gray-900: #2d2b50 !default;
+
+
+// own
+// $gray-100: #f9f9fb !default;
+// $gray-200: #ebeaf0 !default;
+// $gray-300: #e0dfe7 !default;
+// $gray-400: #ceceda !default;
+// $gray-500: #aeadbd !default;
+// $gray-600: #6e6d7e !default;
+// $gray-700: #494856 !default;
+// $gray-800: #363541 !default;
+// $gray-900: #23222a !default;
+
+
+// bootstrap colors 
+// $white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #212529 !default;
+$dark: $gray-800 !default;
+// indigo
+// $gray-100: #f0e7fe !default;
+// $gray-200: #d9c3fc !default;
+// $gray-300: #b388f9 !default;
+// $gray-400: #8c4cf5 !default;
+// $gray-500: #6610f2 !default;
+// $gray-600: #4d0cb6 !default;
+// $gray-700: #6e6973 !default;
+// $gray-800: #1a043d !default;
+// $gray-900: #0f0224 !default;
+
+
+// $gray-900: #343a40 !default;
+
+$success: #28a745 !default;
+$info: #17a2b8 !default;
+$warning: #ffc107 !default;
+$danger: #dc3545 !default;
+
+
+$list-link-color: $gray-600;

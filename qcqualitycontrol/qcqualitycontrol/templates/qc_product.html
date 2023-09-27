@@ -1,0 +1,209 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include 'partials/head.html' %}
+  </head>
+  <body class="bg-light">
+    
+    <!-- NAVBAR
+    ================================================== -->
+    {% include 'partials/qc_navbar.html' with class='' %}
+
+    <!-- CONTENT
+    ================================================== -->
+    <section class="pt-8 pt-md-11 pb-8 pb-md-14">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md">
+
+            <!-- Heading -->
+            <h1 class="display-4 mb-2">
+              {{ product.name }}
+            </h1>
+
+            <!-- Text -->
+            <p class="font-size-lg text-gray-700 mb-5 mb-md-0">
+              {% if product.sub %}{{ product.sub }}{% endif %}
+            </p>
+
+          </div>
+          <div class="col-auto">
+            
+            <!-- Buttons -->
+            <a href="{% url 'content:contact' %}" class="btn btn-primary-soft lift mr-1">
+              Contact
+            </a>
+            <a href="{% url 'content:products_search' %}" class="btn btn-primary shadow lift">
+              Back to the products <i class="fe fe-arrow-right d-none d-md-inline ml-3"></i>
+            </a>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col-12">
+            
+            <!-- Divider -->
+            <hr class="my-6 my-md-8 border-gray-300">
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col-12 col-md-8">
+            
+            <!-- Heading -->
+            <h3>
+              Image
+            </h3>
+
+            <!-- Text -->
+            <p class="text-gray-800 mb-6 mb-md-8">
+              <img src="{{ product.image.url }}" class="img-fluid">
+            </p>
+
+            <!-- Heading -->
+            <h3>
+              Categories
+            </h3>
+
+            <!-- Text -->
+            <p class="text-gray-800 mb-5">
+              {% for c in product.categories.all %}
+                <a href="{% url 'content:products' c.slug %}" class="text-reset">
+                  {{ c.get_parent_names }}<br>
+                </a>
+              {% endfor %}
+            </p>
+
+            <!-- Heading -->
+            <h3 class="">
+              Description
+            </h3>
+
+            <p class="text-gray-800 mb-5">
+              {{ product.description|linebreaksbr }}
+            </p>
+
+            {% if user.is_authenticated %}
+              <hr class="my-6 my-md-8 border-gray-300">
+              <div class="row">
+                <div class="col-12">
+                  <a href="{% url 'content:productmarkdeletion' product.slug %}" class="btn btn-{% if product.deletion_mark %}danger{% else %}info{% endif %} btn-sm mb-2 w-100">mark{% if product.deletion_mark %}ed{% endif %} for deletion</a>
+                </div>
+                <div class="col-12">
+                  <a href="{% url 'content:productmarkimage' product.slug %}" class="btn btn-{% if product.image_mark %}danger{% else %}info{% endif %} btn-sm mb-2 w-100">mark{% if product.image_mark %}ed{% endif %} for image update</a>
+                </div>
+                <div class="col-12">
+                  <a href="{% url 'content:productmarkcategory' product.slug %}" class="btn btn-{% if product.category_mark %}danger{% else %}info{% endif %} btn-sm mb-2 w-100">mark{% if product.category_mark %}ed{% endif %} for category change</a>
+                </div>
+                <div class="col-12">
+                  <a href="{% url 'content:productmarktext' product.slug %}" class="btn btn-{% if product.text_mark %}danger{% else %}info{% endif %} btn-sm mb-2 w-100">mark{% if product.text_mark %}ed{% endif %} for text update</a>
+                </div>
+                <div class="col-12">
+                  <form method="post">
+                    <div class="form-group mb-2">
+                      {% csrf_token %}
+                      <input class="form-control form-control-sm" type="text" value="{{ product.notes_mark }}" name="notes">
+                    </div>
+                    <button type="submit" class="btn btn-info btn-sm w-100">add notes</button>
+                  </form>
+                </div>
+              </div>
+            {% endif %}
+
+          </div>
+          <div class="col-12 col-md-4">
+            
+            <!-- Card -->
+            <div class="card shadow-light-lg mb-5">
+              <div class="card-body">
+                
+                <!-- Heading -->
+                <h4>
+                  Need help?
+                </h4>
+
+                <!-- Text -->
+                <p class="font-size-sm text-gray-800 mb-5">
+                  Not sure exactly what you’re looking for or just want clarification? We’d be happy to chat with you and clear things up for you. Anytime!
+                </p>
+
+                <!-- Heading -->
+                <h6 class="font-weight-bold text-uppercase text-gray-700 mb-2">
+                  Call anytime
+                </h6>
+
+                <!-- Text -->
+                <p class="font-size-sm mb-5">
+                  <a href="tel:+498131998099" class="text-reset">+49 8131 998099</a>
+                </p>
+
+                <!-- Heading -->
+                <h6 class="font-weight-bold text-uppercase text-gray-700 mb-2">
+                  Email us
+                </h6>
+
+                <!-- Text -->
+                <p class="font-size-sm mb-0">
+                  <a href="mailto:info@qc-quality-control.de?subject=Contact%20Inquiry" class="text-reset">info@qc-quality-control.de</a>
+                </p>
+
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card shadow-light-lg">
+              <div class="card-body">
+                
+                <!-- Heading -->
+                <h4>
+                  Address
+                </h4>
+
+                <!-- Text -->
+                <address class="font-size-sm text-gray-800">
+                  QC-Quality Control GmbH<br>
+                  Dieselstrasse 11 <br>
+                  D-85757 Karlsfeld<br>
+                  <a href="tel:+498131998099" class="text-reset">
+                    Phone: +49 8131 998099<br>
+                  </a>
+                  Fax: +49 8131 998101<br>
+                  <a href="mailto:info@qc-quality-control.de?subject=Contact%20Inquiry" class="text-reset">
+                    E-Mail: info@qc-quality-control.de
+                  </a>
+                </address>
+
+                <!-- Heading -->
+                <a href="{% url 'content:contact' %}" class="font-weight-bold font-size-sm text-decoration-none">
+                  Contact <i class="fe fe-arrow-right ml-3"></i>
+                </a>
+
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+
+    <!-- SHAPE
+    ================================================== -->
+    <div class="position-relative">
+      <div class="shape shape-bottom shape-fluid-x svg-shim text-dark">
+        {% include 'shapes/curves/curve-1.svg' %}
+      </div>
+    </div>
+
+    <!-- FOOTER
+    ================================================== -->
+    {% include 'partials/qc_footer.html' with class='bg-dark' %}
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    {% include 'partials/scripts.html' %}
+      
+  </body>
+</html>

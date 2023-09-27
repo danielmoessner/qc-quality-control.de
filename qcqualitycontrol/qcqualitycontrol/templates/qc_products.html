@@ -1,0 +1,148 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  {% include 'partials/head.html' %}
+</head>
+<body class="bg-light" style="padding-top: 84px;">
+
+    <!-- NAVBAR
+      ================================================== -->
+      {% include 'partials/qc_navbar.html' with class='fixed-top bg-white border-bottom' %}
+
+    <!-- BREADCRUMB
+      ================================================== -->
+      <nav class="d-lg-none bg-gray-800">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col">
+
+              <!-- Breadcrumb -->
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <span class="text-white">
+                    Products
+                  </span>
+                </li>
+            <!--   <li class="breadcrumb-item active" aria-current="page">
+                <span class="text-white">
+                  test
+                </span>
+              </li> -->
+            </ol>
+
+          </div>
+          <div class="col-auto">
+
+            <!-- Toggler -->
+            <div class="navbar-dark">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenavCollapse" aria-controls="sidenavCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </nav>
+
+    <!-- CONTENT
+      ================================================== -->
+      <section>
+        <div class="container-fluid min-vh-100">
+          <div class="row">
+            <div class="col-12 col-lg-3 col-xl-3 px-lg-0 border-bottom border-bottom-lg-0 border-right-lg border-gray-300 sidenav sidenav-left">
+
+              {% include 'partials/qc_sidenav.html' %}
+
+            </div>
+            <div class="col-12 col-lg-6 col-xl-7 offset-lg-3 offset-xl-3 py-7 py-lg-9 px-lg-7">
+
+              <!-- Heading -->
+              <h1 class="mb-1">{{ category.name }}</h1>
+
+              <!-- Text -->
+              <p class="font-size-lg text-gray-700 mb-5">
+                We supply you with products!
+              </p>
+
+              <!-- Text -->
+              <!-- <p class="text-gray-700">
+                maybe a search bar
+              </p> -->
+
+              <!-- Divider -->
+              <hr class="border-gray-300 my-6">
+
+              {% include 'partials/qc_products_list.html' %}
+
+            </div>
+            <div class="col-12 col-lg-3 col-xl-2 d-none d-lg-block px-lg-0 sidenav sidenav-right">
+              <div class="my-7 my-lg-9 px-lg-7 border-left-lg border-gray-300">
+
+                <!-- Heading -->
+                <h6 class="text-uppercase font-weight-bold">
+                  Search
+                </h6>
+
+                <!-- Links -->
+                <ul class="list mb-5">
+                  <li class="list-item">
+                    <a class="list-link" href="{% url 'content:products_search' %}">Search for Product</a>
+                  </li>
+                </ul>
+
+                <!-- Heading -->
+                <h6 class="text-uppercase font-weight-bold">
+                  Main Categories
+                </h6>
+
+                <!-- Links -->
+                <ul class="list {% if children %}mb-5{% endif %}">
+                  {% for c in main_categories %}
+                  <li class="list-item">
+                    <a class="list-link" href="{% url 'content:products' c.slug %}">{{ c.name }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+
+                {% if children %}
+                <!-- Heading -->
+                <h6 class="text-uppercase font-weight-bold">
+                  Sub Categories
+                </h6>
+                <!-- Links -->
+                <ul class="list mb-0">
+                  {% for c in children %}
+                  <li class="list-item">
+                    <a class="list-link" href="{% url 'content:products' c.slug %}">{{ c.name }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+
+              </div>
+            </div>
+          </div> <!-- / .row -->
+        </div>
+      </section>
+
+    <!-- SHAPE
+      ================================================== -->
+      <div class="position-relative">
+        <div class="shape shape-bottom shape-fluid-x svg-shim text-dark shape-high">
+          {% include 'shapes/curves/curve-1.svg' %}
+        </div>
+      </div>
+
+    <!-- FOOTER
+      ================================================== -->
+      {% include 'partials/qc_footer.html' with class='bg-dark' %}
+
+    <!-- JAVASCRIPT
+      ================================================== -->
+      {% include 'partials/scripts.html' %}
+      
+    </body>
+    </html>

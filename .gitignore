@@ -1,0 +1,11 @@
+qcqualitycontrolsecrets.json
+qc-quality-control.de.conf
+qcqualitycontrol/db.sqlite3
+*.sqlite3
+node_modules/
+__pycache__/
+logs/
+libs/
+media/
+static/
+.DS_Store

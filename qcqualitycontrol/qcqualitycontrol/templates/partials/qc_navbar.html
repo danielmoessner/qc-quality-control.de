@@ -1,0 +1,186 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light {{ class }}">
+  {% if not 'fixed-top' in class %}
+  <div class="container">
+    {% endif %}
+
+    <!-- Brand -->
+    <a class="navbar-brand" href="{% url 'content:index' %}">
+      <img src="{% static 'img/qc_brand.png' %}" class="navbar-brand-img" alt="...">
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fe fe-x"></i>
+      </button>
+
+      <!-- Navigation -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" onclick="window.open('{% url 'content:index' %}', '_self');" id="navbarStart" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+            Start
+          </a>
+          <div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarStart">
+            <div class="list-group list-group-flush">
+              <a class="list-group-item" href="{% url 'content:index' %}">    
+                <!-- Icon -->
+                <div class="icon icon-sm text-primary">
+                  {% include 'icons/duotone-icons/Map/Compass.svg' %}
+                </div>
+                <!-- Content -->
+                <div class="ml-4">
+                  <!-- Heading -->
+                  <h6 class="font-weight-bold text-uppercase text-primary mb-0">
+                    QC-Quality Control
+                  </h6>
+                  <!-- Text -->
+                  <p class="font-size-sm text-gray-700 mb-0">
+                    We're here to help you
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </li>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarAbout" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+            About us
+          </a>
+          <div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarAbout">
+            <div class="list-group list-group-flush">
+              <a class="list-group-item" href="{% url 'content:companyprofile' %}">    
+                <!-- Icon -->
+                <div class="icon icon-sm text-primary">
+                  {% include 'icons/duotone-icons/Home/Building.svg' %}
+                </div>
+                <!-- Content -->
+                <div class="ml-4">
+                  <!-- Heading -->
+                  <h6 class="font-weight-bold text-uppercase text-primary mb-0">
+                    Company Profile
+                  </h6>
+                  <!-- Text -->
+                  <p class="font-size-sm text-gray-700 mb-0">
+                    More about us
+                  </p>
+                </div>
+              </a>
+              <a class="list-group-item" href="{% url 'content:certificates' %}">
+                <!-- Icon -->
+                <div class="icon icon-sm text-primary">
+                  {% include 'icons/duotone-icons/Files/File.svg' %}
+                </div>
+                <!-- Content -->
+                <div class="ml-4">
+                  <!-- Heading -->
+                  <h6 class="font-weight-bold text-uppercase text-primary mb-0">
+                    Certificates
+                  </h6>
+                  <!-- Text -->
+                  <p class="font-size-sm text-gray-700 mb-0">
+                    Dekra Certification
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDocumentation" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+            Products
+          </a>
+          <div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarDocumentation">
+            <div class="list-group list-group-flush">
+              <a class="list-group-item" href="{% url 'content:products_search' %}">
+                <!-- Icon -->
+                <div class="icon icon-sm text-primary">
+                  {% include 'icons/duotone-icons/General/Search.svg' %}
+                </div>
+                <!-- Content -->
+                <div class="ml-4">
+                  <!-- Heading -->
+                  <h6 class="font-weight-bold text-uppercase text-primary mb-0">
+                    Search
+                  </h6>
+                  <!-- Text -->
+                  <p class="font-size-sm text-gray-700 mb-0">
+                    Search for the Product you Need
+                  </p>
+                </div>
+              </a>
+              {% for c in main_categories %}
+              <a class="list-group-item" href="{% url 'content:products' c.slug %}">    
+                <!-- Icon -->
+                <div class="icon icon-sm text-primary">
+                  {% include c.icon %}
+                </div>
+                <!-- Content -->
+                <div class="ml-4">
+                  <!-- Heading -->
+                  <h6 class="font-weight-bold text-uppercase text-primary mb-0">
+                    {{ c.name }}
+                  </h6>
+                  <!-- Text -->
+                  <p class="font-size-sm text-gray-700 mb-0">
+                    {{ c.sub }}
+                  </p>
+                </div>
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+        </li>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link open-on-click dropdown-toggle" id="navbarContact" data-toggle="dropdown" href="#" onclick="window.open('{% url 'content:contact' %}', '_self');" aria-haspopup="true" aria-expanded="false">
+            Contact
+          </a>
+          <div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarContact">
+            <div class="list-group list-group-flush">
+              <a class="list-group-item" href="{% url 'content:contact' %}">    
+                <!-- Icon -->
+                <div class="icon icon-sm text-primary">
+                  {% include 'icons/duotone-icons/Communication/Send.svg' %}
+                </div>
+                <!-- Content -->
+                <div class="ml-4">
+                  <!-- Heading -->
+                  <h6 class="font-weight-bold text-uppercase text-primary mb-0">
+                    Contact Us
+                  </h6>
+                  <!-- Text -->
+                  <p class="font-size-sm text-gray-700 mb-0">
+                    E-Mail, Phone, and more
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Button -->
+      <a class="navbar-btn btn btn-sm btn-primary lift ml-auto" href="mailto:info@qc-quality-control.de?subject=Contact%20Inquiry" target="_blank">
+        Email Us
+      </a>
+
+    </div>
+    {% if not 'fixed-top' in class %}
+  </div>
+  {% endif %}
+</nav>

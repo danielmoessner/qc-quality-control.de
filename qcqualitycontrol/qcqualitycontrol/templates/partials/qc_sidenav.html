@@ -1,0 +1,19 @@
+{% load static %}
+
+<div class="collapse d-lg-block" id="sidenavCollapse">
+  <div class="py-7 py-lg-9 px-lg-7">
+
+    <nav>
+      <h6 class="text-uppercase font-weight-bold">
+        Categories
+      </h6>
+
+      <ul class="list">
+        {% for c in main_categories %}
+          {{ c.get_children_html|safe }}
+        {% endfor %}
+      </ul>
+    </nav>
+
+  </div>
+</div>

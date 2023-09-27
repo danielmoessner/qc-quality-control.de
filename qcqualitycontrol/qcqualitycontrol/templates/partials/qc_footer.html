@@ -1,0 +1,114 @@
+{% load static %}
+
+<footer class="py-8 py-md-11 position-relative {{ class }}">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-12 col-md-4 col-lg-3 pb-6">
+        <!-- Brand -->
+        <img src="{% static 'img/qc_brand.png' %}" alt="..." class="footer-brand img-fluid mb-2">
+        <!-- Text -->
+        <p class="text-gray-800 mb-2">
+          We offer products for the semiconductor industry and for the pharmaceutical industry.
+        </p>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-2 pb-6">  
+        <!-- Heading -->
+        <h6 class="font-weight-bold text-uppercase text-gray-800">
+          Pages
+        </h6>
+        <!-- List -->
+        <ul class="list-unstyled text-gray-700 mb-0">
+          <li class="mb-3">
+            <a href="{% url 'content:index' %}" class="text-reset">
+              Start
+            </a>
+          </li>
+          <li class="mb-3">
+            <a href="{% url 'content:companyprofile' %}" class="text-reset">
+              About us
+            </a>
+          </li>
+          <li class="mb-3">
+            <a href="{% url 'content:products_search' %}" class="text-reset">
+              Products
+            </a>
+          </li>
+          <li class="mb-3">
+            <a href="{% url 'content:contact' %}" class="text-reset">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 pb-6">
+        <!-- Heading -->
+        <h6 class="font-weight-bold text-uppercase text-gray-800">
+          Connect
+        </h6>
+        <!-- List -->
+        <address class="text-gray-700 text-small mb-3">
+          <small>
+            QC-Quality Control GmbH<br>
+            Dieselstrasse 11 <br>
+            D-85757 Karlsfeld<br>
+            <a href="tel:+498131998099" class="text-reset">
+              Phone: +49 8131 998099<br>
+            </a>
+            Fax: +49 8131 998101<br>
+            <a href="mailto:info@qc-quality-control.de?subject=Contact%20Inquiry" class="text-reset">
+              E-Mail: info@qc-quality-control.de
+            </a>
+          </small>
+        </address>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-2 pb-6">
+        <!-- Heading -->
+        <h6 class="font-weight-bold text-uppercase text-gray-800">
+          Legal
+        </h6>
+        <!-- List -->
+        <ul class="list-unstyled text-gray-700 mb-0">
+          {% for page in pages_footer_legal %}
+            <li class="mb-3">
+              <a href="{% url 'core:page' page.slug %}" class="text-reset">
+                {{ page.name }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-2 pb-6">
+        <!-- Heading -->
+        <h6 class="font-weight-bold text-uppercase text-gray-800">
+          Other
+        </h6>
+        <!-- List -->
+        <ul class="list-unstyled text-gray-700 mb-0">
+          {% for page in pages_footer_other %}
+            <li class="mb-3">
+              <a href="{% url 'core:page' page.slug %}" class="text-reset">
+                {{ page.name }}
+              </a>
+            </li>
+          {% endfor %}
+          <li class="mb-3">
+            <a href="https://tortuga-webdesign.de" target="_blank" class="text-reset">
+              Site designed by Daniel Mössner
+            </a>
+          </li>
+          <li class="mb-3">
+            <a href="{% url 'content:ci' %}" class="text-reset">
+              CI
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</footer>

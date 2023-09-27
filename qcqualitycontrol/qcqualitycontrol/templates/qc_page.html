@@ -1,0 +1,51 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include 'partials/head.html' %}
+  </head>
+  <body class="bg-light">
+    
+    <!-- NAVBAR
+    ================================================== -->
+    {% include 'partials/qc_navbar.html' with class='' %}
+
+    <!-- CONTENT
+    ================================================== -->
+    <section class="pt-8 pt-md-11 pb-8 pb-md-14">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 text-center">
+            <h1>{{ page.name }}</h1>
+          </div>
+          <div class="col-12">
+            {% if page.html_activated %}
+              {{ page.content|safe }}
+            {% else %}
+              {{ page.content|linebreaksbr }}
+            {% endif %}
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+
+    <!-- SHAPE
+    ================================================== -->
+    <div class="position-relative">
+      <div class="shape shape-bottom shape-fluid-x svg-shim text-dark">
+        {% include 'shapes/curves/curve-1.svg' %}
+      </div>
+    </div>
+
+    <!-- FOOTER
+    ================================================== -->
+    {% include 'partials/qc_footer.html' with class='bg-dark' %}
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    {% include 'partials/scripts.html' %}
+      
+  </body>
+</html>

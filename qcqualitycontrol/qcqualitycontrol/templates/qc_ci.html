@@ -1,0 +1,193 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include 'partials/head.html' %}
+  </head>
+  <body class="bg-light py-10">
+
+  	<div class="min-vh-100 d-flex justify-content-center align-items-center">
+	  	<div class="container">
+
+	  		<div class="row pb-8">
+	  			<div class="col-12">
+	  				<a href="{% url 'content:index' %}" class="btn btn-primary w-100">
+	  					<i class="fe fe-arrow-left d-none d-md-inline ml-3"></i> Home
+	  				</a>
+	  			</div>
+	  		</div>
+
+	  		<div class="row">
+	  			<div class="col-12">
+	  				<h1 class="text-center">Logos</h1>
+	  			</div>
+  			</div>
+  			<div class="row justify-content-md-center pb-8">
+	  			<div class="col-md-4 d-flex align-items-md-center justify-content-md-center mb-3">
+	  				<img src="{% static 'img/qc_brand.png' %}" class="img-fluid" style="max-height: 90px; width: auto;">
+	  			</div>
+	  			<div class="col-md-4 align-items-md-center justify-content-md-center d-flex">
+	  				<img src="{% static 'img/qc_brand_rect.png' %}" class="img-fluid" style="max-height: 90px; width: auto;">
+	  			</div>
+	  		</div>
+
+	  		<div class="row">
+	  			<div class="col-12">
+	  				<h1 class="text-center">Colors</h1>
+	  			</div>
+	  		</div>
+	  		<div class="row">
+	  			<div class="col-12">
+	  				<h2>Theme</h2>
+	  			</div>
+	  		</div>
+	  		<div class="row pb-8">
+	  			<div class="col-md-4">
+	  				<div class="p-3 mb-3 bg-primary text-white">
+	  					Primary
+	  				</div>
+	  			</div>
+	  			<div class="col-md-4">
+	  				<div class="p-3 mb-3 bg-primary-soft">
+	  					Soft
+	  				</div>
+	  			</div>
+	  			<div class="col-md-4">
+	  				<div class="p-3 mb-3 bg-secondary text-white">
+	  					Secondary
+	  				</div>
+	  			</div>
+	  			<div class="col-md-4">
+	  				<div class="p-3 mb-3 bg-Light">
+	  					Light
+	  				</div>
+	  			</div>
+	  			<div class="col-md-4">
+	  				<div class="p-3 mb-3 bg-dark text-white">
+	  					Dark
+	  				</div>
+	  			</div>
+	  			<div class="col-md-4">
+	  				<div class="p-3 mb-3 bg-white">
+	  					White
+	  				</div>
+	  			</div>
+	  			<div class="col-md-4">
+	  				<div class="p-3 mb-3 bg-black text-white">
+	  					Black
+	  				</div>
+	  			</div>
+
+	  			<div class="col-md-4">
+	  				<div class="p-3 mb-3 bg-success text-white">
+	  					Success
+	  				</div>
+	  			</div>
+	  			<div class="col-md-4">
+	  				<div class="p-3 mb-3 bg-info text-white">
+	  					Info
+	  				</div>
+	  			</div>
+	  			<div class="col-md-4">
+	  				<div class="p-3 mb-3 bg-warning">
+	  					Warning
+	  				</div>
+	  			</div>
+	  			<div class="col-md-4">
+	  				<div class="p-3 bg-danger text-white">
+	  					Danger
+	  				</div>
+	  			</div>
+	  		</div>
+
+	  		<div class="row">
+	  			<div class="col-12">
+	  				<h2>Gray Scale</h2>
+	  			</div>
+	  		</div>
+	  		<div class="row pb-8">
+		  		<div class="col-md-4">
+		  			<div class="bg-gray-100 p-3">
+			  			Gray 100
+			  		</div>
+			  		<div class="bg-gray-200 p-3">
+			  			Gray 200
+			  		</div>
+			  		<div class="bg-gray-300 p-3">
+			  			Gray 300		
+			  		</div>
+			  		<div class="bg-gray-400 p-3">
+			  			Gray 400	
+			  		</div>
+			  		<div class="bg-gray-500 p-3">
+			  			Gray 500	
+			  		</div>
+			  		<div class="bg-gray-600 p-3 text-white">
+			  			Gray 600	
+			  		</div>
+			  		<div class="bg-gray-700 p-3 text-white">
+			  			Gray 700	
+			  		</div>
+			  		<div class="bg-gray-800 p-3 text-white">
+			  			Gray 800		
+			  		</div>
+			  		<div class="bg-gray-900 p-3 text-white">
+			  			Gray 900		
+			  		</div>
+		  		</div>
+	  		</div>
+
+	  		<div class="row">
+	  			<div class="col-12">
+	  				<h1 class="text-center">Buttons</h1>
+	  			</div>
+	  		</div>
+	  		<div class="row pb-8">
+	  			<div class="col-md-4">
+	  				<div class="mb-3">
+	  					<button class="btn btn-primary-soft w-100">Soft</button>
+	  				</div>
+	  			</div>
+	  			<div class="col-md-4">
+	  				<div class="mb-3">
+		  				<button class="btn btn-primary w-100">Primary</button>
+		  			</div>
+	  			</div>
+	  			<div class="col-md-4">
+	  				<div class="">
+		  				<button class="btn btn-outline-primary w-100">Outline</button>
+		  			</div>
+	  			</div>
+	  		</div>
+
+	  		<div class="row">
+	  			<div class="col-12">
+	  				<h1 class="text-center">Typography</h1>
+	  			</div>
+	  		</div>
+	  		<div class="row pb-8">
+	  			<div class="col-12 text-center">
+	  				<h2 class="m-0">HKGroteskPro Serif</h2>
+	  				<p class="m-0">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+	  				<p class="m-0">abcdefghijklmnopqrstuvwxyz</p>
+	  				<p class="m-0">0123456789 !"$%&+/()=?</p>
+	  			</div>
+	  		</div>
+
+	  		<div class="row">
+	  			<div class="col-12">
+	  				<a href="{% url 'content:index' %}" class="btn btn-primary w-100">
+	  					<i class="fe fe-arrow-left d-none d-md-inline ml-3"></i> Home
+	  				</a>
+	  			</div>
+	  		</div>
+
+	  	</div>
+  	</div>
+
+  	<!-- JAVASCRIPT
+    ================================================== -->
+    {% include 'partials/scripts.html' %}
+  </body>
+</html>

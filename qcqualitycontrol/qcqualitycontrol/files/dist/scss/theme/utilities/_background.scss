@@ -1,0 +1,78 @@
+//
+// background.scss
+// Extended from Bootstrap
+//
+
+.bg-cover {
+  background: no-repeat center center / cover;
+}
+
+
+// Between
+
+.bg-between {
+  
+  @include media-breakpoint-down(md) {
+    background-image: none !important;
+  }
+
+  @include media-breakpoint-up(md) {
+    background-repeat: no-repeat;
+    background-position: left center, right center;
+    background-size: auto 70%;
+  }
+}
+
+
+// Gradients
+
+.bg-gradient-light {
+  background-image: linear-gradient(to bottom, $light 0%, $white 100%);
+}
+
+
+// Colors
+
+.bg-gray-100 {
+  background-color: $gray-100 !important;
+}
+
+.bg-gray-200 {
+  background-color: $gray-200 !important;
+}
+
+.bg-gray-300 {
+  background-color: $gray-300 !important;
+}
+
+.bg-gray-400 {
+  background-color: $gray-400 !important;
+}
+
+.bg-gray-500 {
+  background-color: $gray-500 !important;
+}
+
+.bg-gray-600 {
+  background-color: $gray-600 !important;
+}
+
+.bg-gray-700 {
+  background-color: $gray-700 !important;
+}
+
+.bg-gray-800 {
+  background-color: $gray-800 !important;
+}
+
+.bg-gray-900 {
+  background-color: $gray-900 !important;
+}
+
+.bg-black {
+  background-color: $black !important;
+}
+
+.bg-primary-soft {
+  background-color: rgba($primary, $btn-soft-bg-opacity) !important;
+}
