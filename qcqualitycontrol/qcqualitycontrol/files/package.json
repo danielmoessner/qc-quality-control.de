@@ -1,16 +1,16 @@
 {
   "private": true,
   "name": "qc-quality-control.de",
-  "version": "1.1.0",
+  "version": "0.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "author": "Good Themes",
+  "author": "danielmoessner",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "aos": "3.0.0-beta.6",
-    "bootstrap": "4.3.1",
+    "bootstrap": "^4.6.2",
     "gulp": "4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
@@ -20,9 +20,7 @@
     "gulp-uglify": "3.0.2",
     "jquery": "^3.7.1",
     "sass": "^1.68.0",
-    "typed.js": "^2.0.16"
-  },
-  "dependencies": {
+    "typed.js": "^2.0.16",
     "gulp-file-include": "^2.3.0"
   }
 }
