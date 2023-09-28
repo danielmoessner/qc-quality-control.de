@@ -7,7 +7,7 @@ from django.http import HttpResponseRedirect
 from django.http import JsonResponse
 from django.urls import reverse_lazy
 
-from qcqualitycontrol.core.views import WebsiteView
+from apps.core.views import WebsiteView
 from .forms import ContactForm
 from .forms import NotesForm
 from .models import Category

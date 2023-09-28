@@ -1,12 +1,12 @@
 import os
 import json
+from pathlib import Path
 from django.core.exceptions import ImproperlyConfigured
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-APPS_DIR = os.path.join(BASE_DIR, "qcqualitycontrol")
+BASE_DIR = Path(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 
-with open(os.path.join(os.path.dirname(BASE_DIR), "qcqualitycontrolsecrets.json")) as f:
+with open(BASE_DIR / "tmp/secrets.json") as f:
     secrets_json = json.loads(f.read())
 
 
@@ -27,8 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'qcqualitycontrol.core.apps.CoreConfig',
-    'qcqualitycontrol.content.apps.ContentConfig'
+    'apps.core.apps.CoreConfig',
+    'apps.content.apps.ContentConfig'
 ]
 
 MIDDLEWARE = [
@@ -47,8 +47,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(APPS_DIR, 'templates'),
-            os.path.join(APPS_DIR, 'files/dist/img'),
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'files/dist/img'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -67,7 +67,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': BASE_DIR / 'tmp/db.sqlite3',
     }
 }
 
@@ -99,14 +99,14 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(APPS_DIR, 'files/dist'),
+    BASE_DIR / 'files/dist',
 ]
 
-STATIC_ROOT = os.path.join(APPS_DIR, 'static')
+STATIC_ROOT = BASE_DIR / 'tmp/static'
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(APPS_DIR, 'media')
+MEDIA_ROOT = BASE_DIR / 'tmp/media'
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.strato.de'

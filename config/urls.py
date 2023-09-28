@@ -6,16 +6,16 @@ from django.urls import path
 
 
 urlpatterns = [
-    path('', include('qcqualitycontrol.content.urls')),
-    path('', include('qcqualitycontrol.core.urls')),
+    path('', include('apps.content.urls')),
+    path('', include('apps.core.urls')),
     path('admin/', admin.site.urls),
 ]
 
 
-handler400 = "qcqualitycontrol.core.views.error_400_view"
-handler403 = "qcqualitycontrol.core.views.error_403_view"
-handler404 = "qcqualitycontrol.core.views.error_404_view"
-handler500 = "qcqualitycontrol.core.views.error_500_view"
+handler400 = "apps.core.views.error_400_view"
+handler403 = "apps.core.views.error_403_view"
+handler404 = "apps.core.views.error_404_view"
+handler500 = "apps.core.views.error_500_view"
 
 
 if settings.DEBUG:
