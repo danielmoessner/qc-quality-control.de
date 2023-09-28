@@ -1,8 +1,3 @@
-//
-// Variables ===================================
-//
-
-// Load dependencies
 const autoprefixer = require('gulp-autoprefixer');
 const cleancss = require('gulp-clean-css');
 const gulp = require('gulp');
@@ -11,63 +6,57 @@ const sass = require('gulp-sass')(require('sass'));
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 
-// Define paths
 const paths = {
-  base:   {
-    base:         {
-      dir:    './'
+  base: {
+    base: {
+      dir: './'
     },
-    node:         {
-      dir:    './node_modules'
+    node: {
+      dir: './node_modules'
     },
-    packageLock:  {
-      files:  './package-lock.json'
+    packageLock: {
+      files: './package-lock.json'
     }
   },
-  dist:   {
-    base:   {
-      dir:    './dist',
-      files:  './dist/**/*'
+  dist: {
+    base: {
+      dir: './dist',
+      files: './dist/**/*'
     },
-    libs:   {
-      dir:    './dist/libs'
+    libs: {
+      dir: './dist/libs'
     },
-    css:    {
-      dir:    './dist/css',
-      files:  './dist/css/**/*'
+    css: {
+      dir: './dist/css',
+      files: './dist/css/**/*'
     },
-    img:    {
-      dir:    './dist/img',
-      files:  './dist/img/**/*',
+    img: {
+      dir: './dist/img',
+      files: './dist/img/**/*',
     },
-    jsa:     {
-      dir:    './dist/jsa',
-      files:  './dist/jsa/**/*',
-      exclude:'!./dist/jsa/**/*.min.js'
+    jsa: {
+      dir: './dist/jsa',
+      files: './dist/jsa/**/*',
+      exclude: '!./dist/jsa/**/*.min.js'
     },
-    js:     {
-      dir:    './dist/js',
-      files:  './dist/js/**/*',
-      exclude:'!./dist/js/**/*.min.js'
+    js: {
+      dir: './dist/js',
+      files: './dist/js/**/*',
+      exclude: '!./dist/js/**/*.min.js'
     },
-    scss:   {
-      dir:    './dist/scss',
-      files:  './dist/scss/**/*',
-      main:   './dist/scss/*.scss'
+    scss: {
+      dir: './dist/scss',
+      files: './dist/scss/**/*',
+      main: './dist/scss/*.scss'
     },
   }
 };
 
-
-//
-// Tasks ===================================
-//
-
-gulp.task('watch', function() {
+gulp.task('watch', function () {
   gulp.watch(paths.dist.scss.files, gulp.series('scss'));
 });
 
-gulp.task('scss', function() {
+gulp.task('scss', function () {
   return gulp
     .src(paths.dist.scss.main)
     .pipe(sass().on('error', sass.logError))
@@ -76,7 +65,7 @@ gulp.task('scss', function() {
     .pipe(gulp.dest(paths.dist.css.dir));
 });
 
-gulp.task('js', function() {
+gulp.task('js', function () {
   return gulp
     .src([
       paths.dist.js.files,
@@ -87,7 +76,7 @@ gulp.task('js', function() {
     .pipe(gulp.dest(paths.dist.js.dir));
 });
 
-gulp.task('copy:libs', function() {
+gulp.task('copy:libs', function () {
   return gulp
     .src(npmdist(), { base: paths.base.node.dir })
     .pipe(gulp.dest(paths.dist.libs.dir));
