@@ -1,5 +1,4 @@
-qcqualitycontrolsecrets.json
-qc-quality-control.de.conf
+*secrets.json
 qcqualitycontrol/db.sqlite3
 *.sqlite3
 node_modules/
