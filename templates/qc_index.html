@@ -7,474 +7,682 @@
 <html lang="en">
 
 
-  <head>
+<head>
 
-    {% include 'partials/head.html' %}
+  {% include 'partials/head.html' %}
 
-  </head>
+</head>
 
 
-  <body>
-    
-    <!-- NAVBAR
+<body>
+
+  <!-- NAVBAR
     ================================================== -->
-    {% include 'partials/qc_navbar.html' with class='' %}
+  {% include 'partials/qc_navbar.html' with class='' %}
 
-    <!-- WELCOME
-    ================================================== -->
-    <section class="pt-4 pt-md-11">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-12 col-md-5 col-lg-6 order-md-2">
-            
-            <!-- Image -->
-            <img src="{% static 'img/illustrations/qc_illustration.png' %}" class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
-
-          </div>
-          <div class="col-12 col-md-7 col-lg-6 order-md-1" data-aos="fade-up">
-            
-            <!-- Heading -->
-            <h1 class="display-3 text-center text-md-left">
-              Welcome to <span class="text-primary">QC Quality Control</span>.
-            </h1>
-
-            <!-- Text -->
-            <p class="lead text-center text-md-left text-muted mb-6 mb-lg-8">
-              We offer products for the semiconductor industry and for the pharmaceutical industry.
-            </p>
-                
-            <!-- Buttons -->
-            <div class="text-center text-md-left">
-              <a href="{% url 'content:products_search' %}" class="btn btn-primary shadow lift mr-1">
-                View all products <i class="fe fe-arrow-right d-none d-md-inline ml-3"></i>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-10 col-lg-6">
+          <h1>In Liquidation</h1>
+          <p>
+            Sehr geehrter Kunde, <br>
+            <br>
+            Ich möchte mich heute für die langjährige und gute Zusammenarbeit bezüglich aller QC-Produkte bedanken und
+            Ihnen mitteilen, dass ich bald in den Ruhestand gehe. <br>
+            Meine Firma QC-Quality Control GmbH wird zum 1. Januar 2025 in Liquidation gehen und damit ihre
+            Geschäftstätigkeit einstellen. Alle offenen Aufträge werden selbstverständlich wie bisher bearbeitet und
+            ausgeliefert - die Liquidation endet voraussichtlich am 31.12.2025
+          </p>
+          <h2 class="h3 border-dark border-2 pt-3 mt-3" style="border-top-style: dashed;">
+            An alle Interessenten von RION Partikelzählgeräten und SIMCO/ION Ionisationsgeräten:
+          </h2>
+          <p>
+            Um eine kontinuierliche Versorgung mit dem von Ihnen geschätzten RION Partikelzähler und SIMCO/ION
+            Ionisationsgeräten zu gewährleisten,
+            wird die Firma PMT Partikel-Messtechnik GmbH nun alle Kunden übernehmen und die Betreuung in Zukunft (ab
+            01.01.2025) übernehmen.
+          </p>
+          <ul>
+            <li>
+              Bitte besuchen Sie deren Website unter <a href="https://www.pmt.eu">https://www.pmt.eu</a>
+            </li>
+          </ul>
+          <p>
+            Bei weiteren Fragen wenden Sie sich bitte an:
+            <br>
+            Dirk Jessen, CEO
+          </p>
+          <ul>
+            <li>
+              <a href="tel:+49 (0) 7033/5374-16">
+                +49 (0) 7033/5374-16
               </a>
-              <a href="{% url 'content:contact' %}" class="btn btn-primary-soft lift">
-                Contact
+            </li>
+            <li>
+              <a href="mailto:d.jessen@pmt.eu">
+                d.jessen@pmt.eu
               </a>
-            </div>
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
-
-    <!-- FEATURES
-    ================================================== -->
-    <section class="pt-8 pt-md-11 pb-8 pb-md-13 border-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="50">
-
-            <!-- Icon -->
-            <div class="icon text-primary mb-3">
-              {% include 'icons/duotone-icons/Design/Line.svg' %}
-            </div>
-
-            <!-- Heading -->
-            <h3>
-              Improved Processes
-            </h3>
-
-            <!-- Text -->
-            <p class="text-muted mb-6 mb-md-0">
-              Our products help you improve your processes.
-            </p>
-
-          </div>
-          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
-              
-            <!-- Icon -->
-            <div class="icon text-primary mb-3">
-              {% include 'icons/duotone-icons/General/Star.svg' %}
-            </div>
-
-            <!-- Heading -->
-            <h3>
-              Higher Quality Products
-            </h3>
-
-            <!-- Text -->
-            <p class="text-muted mb-0">
-              Improved processes help you to deliver higher quality products.
-            </p>
-
-          </div>
-          <div class="col-12 col-md-4" data-aos="fade-up">
-            
-            <!-- Icon -->
-            <div class="icon text-primary mb-3">
-              {% include 'icons/duotone-icons/General/Like.svg' %}
-            </div>
-
-            <!-- Heading -->
-            <h3>
-              Satisfied Customers
-            </h3>
-
-            <!-- Text -->
-            <p class="text-muted mb-6 mb-md-0">
-              Higher quality products satisfy your customers.
-            </p>
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
-    
-    <!-- SHAPE
-    ================================================== -->
-    <div class="position-relative mt-n8">
-      <div class="shape shape-bottom shape-fluid-x svg-shim text-gray-200">
-        {% include 'shapes/curves/curve-2.svg' %}
+            </li>
+          </ul>
+          <h2 class="h3 border-dark border-2 pt-3 mt-3" style="border-top-style: dashed;">
+            An alle Interessenten von ehemals Dynatex Verbrauchsmaterialien (KerfAid™, DXB Series Wafer Bonders,
+            WaferGrip™, StripAid™, Mylar Protective Overlays):
+          </h2>
+          <p>
+            Um eine kontinuierliche Versorgung mit den von Ihnen geschätzten Verbrauchsmaterialien zu gewährleisten,
+            werden unsere Lieferanten, die Millice Group, einschließlich Millice Pte Ltd. und Image Transforms Singapore
+            Pte Ltd, nun alle Kunden übernehmen und in Zukunft direkt beliefern.
+          </p>
+          <ul>
+            <li>
+              Bitte besuchen Sie ihre Website unter <a
+                href="https://www.millice.com.sg/">https://www.millice.com.sg/</a>
+            </li>
+            <li>
+              Für alle Ihre Produktanforderungen, einschließlich KerfAid™, DXB Series Wafer Bonders, WaferGrip™,
+              StripAid™, Mylar Protective Overlays, senden Sie bitte eine E-Mail an info@millice.com.sg.
+            </li>
+          </ul>
+          <p>
+            Wenn Sie weitere Fragen haben, wenden Sie sich bitte an: <br>
+            Brady Grimes, Global Business Development - Consumables
+          </p>
+          <ul>
+            <li>
+              <a href="tel:+60 12441 2276">
+                +60 12441 2276
+              </a>
+            </li>
+            <li>
+              <a href="mailto:Brady.Grimes@ImageTransforms.com">
+                Brady.Grimes@ImageTransforms.com
+              </a>
+            </li>
+          </ul>
+          <h2 class="h3 border-dark border-2 pt-3 mt-3" style="border-top-style: dashed;">
+            AiT-Produkte
+          </h2>
+          <p>
+            Wir werden in Kürze eine Lösung für AiT-Produkte präsentieren
+          </p>
+          <h2 class="h3 border-dark border-2 pt-3 mt-3" style="border-top-style: dashed;">
+            Frühere Dynatex-Tools (DTX Scribe & Break; DXE - Wafer Expander)
+          </h2>
+          <p>
+            Wir werden in Kürze eine Lösung für DTX und DXE präsentieren
+          </p>
+          <p class="border-dark border-2 pt-3 mt-3" style="border-top-style: dashed;">
+            Weihnachten steht kurz bevor und ich möchte die Gelegenheit nutzen,
+            Ihnen allen für das Vertrauen zu danken, das Sie uns im Laufe der Jahre entgegengebracht haben.
+            Wir wünschen Ihnen und Ihren Familien frohe Weihnachten und ein glückliches und friedliches neues Jahr!
+            <br><br>
+            Mit freundlichen Grüßen <br>
+            Reimund Rieger
+          </p>
+        </div>
+        <div class="col-12 col-md-10 col-lg-6">
+          <h1 class="opacity-0">In Liquidation</h1>
+          <p>
+            Dear customer, <br>
+            <br>
+            I would like to thank you today for the many years of good cooperation regarding all QC products and to
+            inform you that I will soon be retiring. <br>
+            My company QC-Quality Control GmbH will go into liquidation on January 1, 2025 and thus cease its business
+            activities. All open orders will of course be processed and delivered as before - the liquidation is
+            expected to end on December 31, 2025
+          </p>
+          <h2 class="h3 border-dark border-2 pt-3 mt-3" style="border-top-style: dashed;">
+            To all those interested in RION particle counters and SIMCO/ION ionization devices:
+          </h2>
+          <p>
+            In order to ensure a continuous supply of the RION particle counter and SIMCO/ION ionization devices that
+            you value,
+            the company PMT Partikel-Messtechnik GmbH will now take over all customers and provide support in the future
+            (from January 1, 2025).
+            PMT Partikel-Messtechnik GmbH will contact you shortly and introduce you to their company.
+          </p>
+          <ul>
+            <li>
+              Please visit their website at <a href="https://www.pmt.eu">https://www.pmt.eu</a>
+            </li>
+          </ul>
+          <p>
+            If you have any further questions, please contact: <br>
+            Dirk Jessen, CEO
+          </p>
+          <ul>
+            <li>
+              <a href="tel:+49 (0) 7033/5374-16">
+                +49 (0) 7033/5374-16
+              </a>
+            </li>
+            <li>
+              <a href="mailto:d.jessen@pmt.eu">
+                d.jessen@pmt.eu
+              </a>
+            </li>
+          </ul>
+          <h2 class="h3 border-dark border-2 pt-3 mt-3" style="border-top-style: dashed;">
+            To all interested parties of former Dynatex consumables (KerfAid™, DXB Series Wafer Bonders, WaferGrip™,
+            StripAid™, Mylar Protective Overlays):
+          </h2>
+          <p>
+            To ensure a continuous supply of the consumables you value, our suppliers, the Millice Group, including
+            Millice Pte Ltd. and Image Transforms Singapore Pte Ltd, will now take over all customers and supply them
+            directly in the future.
+          </p>
+          <ul>
+            <li>
+              Please visit their website at <a href="https://www.millice.com.sg/">https://www.millice.com.sg/</a>
+            </li>
+            <li>
+              For all your product requirements including KerfAid™, DXB Series Wafer Bonders, WaferGrip™, StripAid™,
+              Mylar Protective Overlays, please email info@millice.com.sg.
+            </li>
+          </ul>
+          <p>
+            If you have any further questions, please contact: <br>
+            Brady Grimes, Global Business Development - Consumables
+          </p>
+          <ul>
+            <li>
+              <a href="tel:+60 12441 2276">
+                +60 12441 2276
+              </a>
+            </li>
+            <li>
+              <a href="mailto:Brady.Grimes@ImageTransforms.com">
+                Brady.Grimes@ImageTransforms.com
+              </a>
+            </li>
+          </ul>
+          <h2 class="h3 border-dark border-2 pt-3 mt-3" style="border-top-style: dashed;">
+            AiT Products
+          </h2>
+          <p>
+            We will soon present a solution for AiT products
+          </p>
+          <h2 class="h3 border-dark border-2 pt-3 mt-3" style="border-top-style: dashed;">
+            Former Dynatex tools (DTX Scribe & Break; DXE - Wafer Expander)
+          </h2>
+          <p>
+            We will soon present a solution for DTX and DXE
+          </p>
+          <p class="border-dark border-2 pt-3 mt-3" style="border-top-style: dashed;">
+            It's almost Christmas and I would like to take this opportunity to thank you all for the trust you have
+            placed in us over the years. We wish you and your families a Merry Christmas and a happy and peaceful New
+            Year!
+            <br><br>
+            Best regards <br>
+            Reimund Rieger
+          </p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- BRANDS
+  <!-- WELCOME
     ================================================== -->
-    <section class="py-6 py-md-8 border-bottom bg-gray-200">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-10 col-lg-8 text-center">
-            
-            <!-- Heading -->
-            <h2>
-              Our Partners.
-            </h2>
+  <section class="pt-4 pt-md-11">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-5 col-lg-6 order-md-2">
 
+          <!-- Image -->
+          <img src="{% static 'img/illustrations/qc_illustration.png' %}"
+            class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
 
+        </div>
+        <div class="col-12 col-md-7 col-lg-6 order-md-1" data-aos="fade-up">
+
+          <!-- Heading -->
+          <h1 class="display-3 text-center text-md-left">
+            Welcome to <span class="text-primary">QC Quality Control</span>.
+          </h1>
+
+          <!-- Text -->
+          <p class="lead text-center text-md-left text-muted mb-6 mb-lg-8">
+            We offer products for the semiconductor industry and for the pharmaceutical industry.
+          </p>
+
+          <!-- Buttons -->
+          <div class="text-center text-md-left">
+            <a href="{% url 'content:products_search' %}" class="btn btn-primary shadow lift mr-1">
+              View all products <i class="fe fe-arrow-right d-none d-md-inline ml-3"></i>
+            </a>
+            <a href="{% url 'content:contact' %}" class="btn btn-primary-soft lift">
+              Contact
+            </a>
           </div>
-        </div> <!-- / .row -->
-        <div class="row align-items-center justify-content-center">
-          <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
-            
-            <!-- Brand -->
-            <div class="img-fluid text-gray-600 mb-2 mb-md-0">
-              <img src="{% static 'img/partner/statico.png' %}" class="img-fluid img-partner">
-            </div>
 
-          </div>
-          <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
-            
-            <!-- Brand -->
-            <div class="img-fluid text-gray-600 mb-2 mb-md-0">
-              <img src="{% static 'img/partner/ait.png' %}" class="img-fluid img-partner">
-            </div>
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
 
-          </div>
-          <div class="col-6 col-sm-4 col-md-3 mb-4 mb-md-0">
-            
-            <!-- Brand -->
-            <div class="img-fluid text-gray-600 mb-2 mb-md-0">
-              <img src="{% static 'img/partner/dynatex.png' %}" class="img-fluid img-partner">
-            </div>
-
-          </div>
-          <div class="col-6 col-sm-4 col-md-3 mb-4 mb-md-0">
-            
-            <!-- Brand -->
-            <div class="img-fluid text-gray-600 mb-2 mb-md-0">
-              <img src="{% static 'img/partner/kanomax.png' %}" class="img-fluid img-partner">
-            </div>
-
-          </div>
-          <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
-            
-            <!-- Brand -->
-            <div class="img-fluid text-gray-600 mb-2 mb-md-0">
-              <img src="{% static 'img/partner/mgn.png' %}" class="img-fluid img-partner">
-            </div>
-
-          </div>
-          <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
-            
-            <!-- Brand -->
-            <div class="img-fluid text-gray-600 mb-2 mb-md-0">
-              <img src="{% static 'img/partner/simco.png' %}" class="img-fluid img-partner">
-            </div>
-
-          </div>
-          <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
-            
-            <!-- Brand -->
-            <div class="img-fluid text-gray-600 mb-2 mb-md-0">
-              <img src="{% static 'img/partner/rion.png' %}" class="img-fluid img-partner">
-            </div>
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
-
-    <!-- PRICING
+  <!-- FEATURES
     ================================================== -->
-    <section class="pt-9 pt-md-12 bg-gray-200">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-10 col-lg-8 text-center">
-            
-            <!-- Heading -->
-            <h1>
-              What do you need?
-            </h1>
-            
-            <!-- Text -->
-            <p class="lead text-gray-700">
-              We offer products for the semiconductor industry and for the pharmaceutical industry.
-            </p>
+  <section class="pt-8 pt-md-11 pb-8 pb-md-13 border-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="50">
 
+          <!-- Icon -->
+          <div class="icon text-primary mb-3">
+            {% include 'icons/duotone-icons/Design/Line.svg' %}
           </div>
-        </div> <!-- / .row -->
-        <div class="row align-items-center no-gutters">
-          <div class="col-12 col-md-6">
-            
-            <!-- Card -->
-            <div class="card rounded-lg shadow-lg mb-6 mb-md-0" style="z-index: 1;" data-aos="fade-up">
 
-              <!-- Body -->
-              <div class="card-body py-6 py-md-8">
-                <div class="row justify-content-center">
-                  <div class="col-12 col-xl-9">
-                
-                    <!-- Badge -->
-                    <div class="text-center mb-5">
-                      <span class="badge badge-pill badge-primary-soft">
-                        <span class="h6 font-weight-bold text-uppercase">Products</span>
-                      </span>
+          <!-- Heading -->
+          <h3>
+            Improved Processes
+          </h3>
+
+          <!-- Text -->
+          <p class="text-muted mb-6 mb-md-0">
+            Our products help you improve your processes.
+          </p>
+
+        </div>
+        <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
+
+          <!-- Icon -->
+          <div class="icon text-primary mb-3">
+            {% include 'icons/duotone-icons/General/Star.svg' %}
+          </div>
+
+          <!-- Heading -->
+          <h3>
+            Higher Quality Products
+          </h3>
+
+          <!-- Text -->
+          <p class="text-muted mb-0">
+            Improved processes help you to deliver higher quality products.
+          </p>
+
+        </div>
+        <div class="col-12 col-md-4" data-aos="fade-up">
+
+          <!-- Icon -->
+          <div class="icon text-primary mb-3">
+            {% include 'icons/duotone-icons/General/Like.svg' %}
+          </div>
+
+          <!-- Heading -->
+          <h3>
+            Satisfied Customers
+          </h3>
+
+          <!-- Text -->
+          <p class="text-muted mb-6 mb-md-0">
+            Higher quality products satisfy your customers.
+          </p>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- SHAPE
+    ================================================== -->
+  <div class="position-relative mt-n8">
+    <div class="shape shape-bottom shape-fluid-x svg-shim text-gray-200">
+      {% include 'shapes/curves/curve-2.svg' %}
+    </div>
+  </div>
+
+  <!-- BRANDS
+    ================================================== -->
+  <section class="py-6 py-md-8 border-bottom bg-gray-200">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 text-center">
+
+          <!-- Heading -->
+          <h2>
+            Our Partners.
+          </h2>
+
+
+        </div>
+      </div> <!-- / .row -->
+      <div class="row align-items-center justify-content-center">
+        <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
+
+          <!-- Brand -->
+          <div class="img-fluid text-gray-600 mb-2 mb-md-0">
+            <img src="{% static 'img/partner/statico.png' %}" class="img-fluid img-partner">
+          </div>
+
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
+
+          <!-- Brand -->
+          <div class="img-fluid text-gray-600 mb-2 mb-md-0">
+            <img src="{% static 'img/partner/ait.png' %}" class="img-fluid img-partner">
+          </div>
+
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 mb-4 mb-md-0">
+
+          <!-- Brand -->
+          <div class="img-fluid text-gray-600 mb-2 mb-md-0">
+            <img src="{% static 'img/partner/dynatex.png' %}" class="img-fluid img-partner">
+          </div>
+
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 mb-4 mb-md-0">
+
+          <!-- Brand -->
+          <div class="img-fluid text-gray-600 mb-2 mb-md-0">
+            <img src="{% static 'img/partner/kanomax.png' %}" class="img-fluid img-partner">
+          </div>
+
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
+
+          <!-- Brand -->
+          <div class="img-fluid text-gray-600 mb-2 mb-md-0">
+            <img src="{% static 'img/partner/mgn.png' %}" class="img-fluid img-partner">
+          </div>
+
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
+
+          <!-- Brand -->
+          <div class="img-fluid text-gray-600 mb-2 mb-md-0">
+            <img src="{% static 'img/partner/simco.png' %}" class="img-fluid img-partner">
+          </div>
+
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
+
+          <!-- Brand -->
+          <div class="img-fluid text-gray-600 mb-2 mb-md-0">
+            <img src="{% static 'img/partner/rion.png' %}" class="img-fluid img-partner">
+          </div>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- PRICING
+    ================================================== -->
+  <section class="pt-9 pt-md-12 bg-gray-200">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 text-center">
+
+          <!-- Heading -->
+          <h1>
+            What do you need?
+          </h1>
+
+          <!-- Text -->
+          <p class="lead text-gray-700">
+            We offer products for the semiconductor industry and for the pharmaceutical industry.
+          </p>
+
+        </div>
+      </div> <!-- / .row -->
+      <div class="row align-items-center no-gutters">
+        <div class="col-12 col-md-6">
+
+          <!-- Card -->
+          <div class="card rounded-lg shadow-lg mb-6 mb-md-0" style="z-index: 1;" data-aos="fade-up">
+
+            <!-- Body -->
+            <div class="card-body py-6 py-md-8">
+              <div class="row justify-content-center">
+                <div class="col-12 col-xl-9">
+
+                  <!-- Badge -->
+                  <div class="text-center mb-5">
+                    <span class="badge badge-pill badge-primary-soft">
+                      <span class="h6 font-weight-bold text-uppercase">Products</span>
+                    </span>
+                  </div>
+
+                  <!-- Features -->
+                  {% for c in main_categories %}
+                  <div class="d-flex">
+                    <!-- Check -->
+                    <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                      <i class="fe fe-check"></i>
                     </div>
-
-                    <!-- Features -->
-                    {% for c in main_categories %}
-                      <div class="d-flex">
-                        <!-- Check -->
-                        <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-                          <i class="fe fe-check"></i>
-                        </div>
-                        <!-- Text -->
-                        <p>
-                          {{ c.name }}
-                        </p>
-                      </div>
-                    {% endfor %}
-                  </div>
-                </div> <!-- / .row -->
-              </div>
-
-              <!-- Button -->
-              <a href="{% url 'content:products_search' %}" class="card-btn btn btn-block btn-lg btn-primary rounded-bottom">
-                Go to the products
-              </a>
-
-            </div>
-
-          </div>
-          <div class="col-12 col-md-6 ml-md-n3">
-            
-            <!-- Card -->
-            <div class="card rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
-
-              <!-- Body -->
-              <div class="card-body py-6 py-md-8">
-                <div class="row justify-content-center">
-                  <div class="col-12 col-xl-10">
-                
-                    <!-- Badge -->
-                    <p class="text-center mb-8 mb-md-11">
-                      <span class="badge badge-pill badge-primary-soft">
-                        <span class="h6 font-weight-bold text-uppercase">Contact</span>
-                      </span>
-                    </p>
-
                     <!-- Text -->
-                    <p class="lead text-center text-muted mb-0 mb-md-10">
-                      We can help you find the right product. Improve the quality of your products. Contact us now.
+                    <p>
+                      {{ c.name }}
                     </p>
-                  
                   </div>
-                </div> <!-- / .row -->
-              </div>
-
-              <!-- Button -->
-              <a href="{% url 'content:contact' %}" class="card-btn btn btn-block btn-lg btn-light bg-gray-300 text-gray-700 rounded-bottom">
-                Contact us
-              </a>
-
+                  {% endfor %}
+                </div>
+              </div> <!-- / .row -->
             </div>
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
-
-    <!-- SHAPE
-    ================================================== -->
-    <div class="position-relative mt-n15">
-      <div class="shape shape-bottom shape-fluid-x svg-shim text-dark">
-        {% include 'shapes/curves/curve-1.svg' %}
-      </div>
-    </div>
-
-    <!-- FAQ
-    ================================================== -->
-    <section class="pt-15 bg-dark d-none">
-      <div class="container pt-8 pt-md-11">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            
-            <!-- Item -->
-            <div class="d-flex">
-
-              <!-- Badge -->
-              <div class="badge badge-lg badge-rounded-circle badge-success">
-                <span>?</span>
-              </div>
-
-              <div class="ml-5">
-
-                <!-- Heading -->
-                <h4 class="text-white">
-                  Can I use Landkit for my clients?
-                </h4>
-
-                <!-- Text -->
-                <p class="text-muted mb-6 mb-md-8">
-                  Absolutely. The Bootstrap Themes license allows you to build a websites for personal use or for a client. 
-                </p>
-
-              </div>
-
-            </div>
-            
-            <!-- Item -->
-            <div class="d-flex">
-
-              <!-- Badge -->
-              <div class="badge badge-lg badge-rounded-circle badge-success">
-                <span>?</span>
-              </div>
-
-              <div class="ml-5">
-
-                <!-- Heading -->
-                <h4 class="text-white">
-                  Do I get free updates?
-                </h4>
-
-                <!-- Text -->
-                <p class="text-muted mb-6 mb-md-0">
-                  Yes. We update all of our themes with each Bootstrap update, plus are constantly adding new components, pages, and features to our themes. 
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-          <div class="col-12 col-md-6">
-            
-            <!-- Item -->
-            <div class="d-flex">
-
-              <!-- Badge -->
-              <div class="badge badge-lg badge-rounded-circle badge-success">
-                <span>?</span>
-              </div>
-
-              <div class="ml-5">
-
-                <!-- Heading -->
-                <h4 class="text-white">
-                  Is there a money back guarantee?
-                </h4>
-
-                <!-- Text -->
-                <p class="text-muted mb-6 mb-md-8">
-                  Yup! Bootstrap Themes come with a satisfaction guarantee. Submit a return and get your money back.
-                </p>
-
-              </div>
-
-            </div>
-            
-            <!-- Item -->
-            <div class="d-flex">
-
-              <!-- Badge -->
-              <div class="badge badge-lg badge-rounded-circle badge-success">
-                <span>?</span>
-              </div>
-
-              <div class="ml-5">
-
-                <!-- Heading -->
-                <h4 class="text-white">
-                  Does it work with Rails? React? Laravel?
-                </h4>
-
-                <!-- Text -->
-                <p class="text-muted mb-6 mb-md-0">
-                  Yes. Landkit has basic CSS/JS files you can include. If you want to enable deeper customization, you can integrate it into your assets pipeline or build processes.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
-
-    <!-- CTA
-    ================================================== -->
-    <section class="pt-15 pb-8 pb-md-11 bg-dark">
-      <div class="container pt-8 pt-md-11">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-10 col-lg-8 text-center">
-            
-            <!-- Badge -->
-            <span class="badge badge-pill badge-gray-700-soft mb-4">
-              <span class="h6 font-weight-bold text-uppercase">Need Help?</span>
-            </span>
-
-            <!-- Heading -->
-            <h1 class="display-4 text-white">
-              <span data-toggle="typed" data-options='{"strings": ["Email us.", "Write us.", "Phone us."]}'></span>
-            </h1>
-
-            <!-- Text -->
-            <p class="font-size-lg text-muted mb-6 mb-md-8">
-              Stop wasting time. Let us help you improve the quality of your products.
-            </p>
 
             <!-- Button -->
-            <a href="{% url 'content:contact' %}" class="btn btn-sm btn-primary lift">
-              Contact <i class="fe fe-arrow-right"></i>
+            <a href="{% url 'content:products_search' %}"
+              class="card-btn btn btn-block btn-lg btn-primary rounded-bottom">
+              Go to the products
             </a>
 
           </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
 
-    <!-- SHAPE
+        </div>
+        <div class="col-12 col-md-6 ml-md-n3">
+
+          <!-- Card -->
+          <div class="card rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+
+            <!-- Body -->
+            <div class="card-body py-6 py-md-8">
+              <div class="row justify-content-center">
+                <div class="col-12 col-xl-10">
+
+                  <!-- Badge -->
+                  <p class="text-center mb-8 mb-md-11">
+                    <span class="badge badge-pill badge-primary-soft">
+                      <span class="h6 font-weight-bold text-uppercase">Contact</span>
+                    </span>
+                  </p>
+
+                  <!-- Text -->
+                  <p class="lead text-center text-muted mb-0 mb-md-10">
+                    We can help you find the right product. Improve the quality of your products. Contact us now.
+                  </p>
+
+                </div>
+              </div> <!-- / .row -->
+            </div>
+
+            <!-- Button -->
+            <a href="{% url 'content:contact' %}"
+              class="card-btn btn btn-block btn-lg btn-light bg-gray-300 text-gray-700 rounded-bottom">
+              Contact us
+            </a>
+
+          </div>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- SHAPE
     ================================================== -->
-    <div class="position-relative">
-      <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-        {% include 'shapes/curves/curve-1.svg' %}
-      </div>
+  <div class="position-relative mt-n15">
+    <div class="shape shape-bottom shape-fluid-x svg-shim text-dark">
+      {% include 'shapes/curves/curve-1.svg' %}
     </div>
+  </div>
 
-    <!-- FOOTER
+  <!-- FAQ
     ================================================== -->
-    {% include 'partials/qc_footer.html' with class='' %}
+  <section class="pt-15 bg-dark d-none">
+    <div class="container pt-8 pt-md-11">
+      <div class="row">
+        <div class="col-12 col-md-6">
 
-    <!-- JAVASCRIPT
+          <!-- Item -->
+          <div class="d-flex">
+
+            <!-- Badge -->
+            <div class="badge badge-lg badge-rounded-circle badge-success">
+              <span>?</span>
+            </div>
+
+            <div class="ml-5">
+
+              <!-- Heading -->
+              <h4 class="text-white">
+                Can I use Landkit for my clients?
+              </h4>
+
+              <!-- Text -->
+              <p class="text-muted mb-6 mb-md-8">
+                Absolutely. The Bootstrap Themes license allows you to build a websites for personal use or for a
+                client.
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- Item -->
+          <div class="d-flex">
+
+            <!-- Badge -->
+            <div class="badge badge-lg badge-rounded-circle badge-success">
+              <span>?</span>
+            </div>
+
+            <div class="ml-5">
+
+              <!-- Heading -->
+              <h4 class="text-white">
+                Do I get free updates?
+              </h4>
+
+              <!-- Text -->
+              <p class="text-muted mb-6 mb-md-0">
+                Yes. We update all of our themes with each Bootstrap update, plus are constantly adding new components,
+                pages, and features to our themes.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-12 col-md-6">
+
+          <!-- Item -->
+          <div class="d-flex">
+
+            <!-- Badge -->
+            <div class="badge badge-lg badge-rounded-circle badge-success">
+              <span>?</span>
+            </div>
+
+            <div class="ml-5">
+
+              <!-- Heading -->
+              <h4 class="text-white">
+                Is there a money back guarantee?
+              </h4>
+
+              <!-- Text -->
+              <p class="text-muted mb-6 mb-md-8">
+                Yup! Bootstrap Themes come with a satisfaction guarantee. Submit a return and get your money back.
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- Item -->
+          <div class="d-flex">
+
+            <!-- Badge -->
+            <div class="badge badge-lg badge-rounded-circle badge-success">
+              <span>?</span>
+            </div>
+
+            <div class="ml-5">
+
+              <!-- Heading -->
+              <h4 class="text-white">
+                Does it work with Rails? React? Laravel?
+              </h4>
+
+              <!-- Text -->
+              <p class="text-muted mb-6 mb-md-0">
+                Yes. Landkit has basic CSS/JS files you can include. If you want to enable deeper customization, you can
+                integrate it into your assets pipeline or build processes.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- CTA
     ================================================== -->
-    <!-- libs js -->
-    {% include 'partials/scripts.html' %}
+  <section class="pt-15 pb-8 pb-md-11 bg-dark">
+    <div class="container pt-8 pt-md-11">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 text-center">
+
+          <!-- Badge -->
+          <span class="badge badge-pill badge-gray-700-soft mb-4">
+            <span class="h6 font-weight-bold text-uppercase">Need Help?</span>
+          </span>
+
+          <!-- Heading -->
+          <h1 class="display-4 text-white">
+            <span data-toggle="typed" data-options='{"strings": ["Email us.", "Write us.", "Phone us."]}'></span>
+          </h1>
+
+          <!-- Text -->
+          <p class="font-size-lg text-muted mb-6 mb-md-8">
+            Stop wasting time. Let us help you improve the quality of your products.
+          </p>
+
+          <!-- Button -->
+          <a href="{% url 'content:contact' %}" class="btn btn-sm btn-primary lift">
+            Contact <i class="fe fe-arrow-right"></i>
+          </a>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- SHAPE
+    ================================================== -->
+  <div class="position-relative">
+    <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+      {% include 'shapes/curves/curve-1.svg' %}
+    </div>
+  </div>
+
+  <!-- FOOTER
+    ================================================== -->
+  {% include 'partials/qc_footer.html' with class='' %}
+
+  <!-- JAVASCRIPT
+    ================================================== -->
+  <!-- libs js -->
+  {% include 'partials/scripts.html' %}
 
 
-  </body>
+</body>
 
 
 </html>
